@@ -26,7 +26,7 @@ export default function RightPanel() {
           </ul>
         </div>
       </div>
-      <div className="new_albums mt-40 md:mt-0 md:h-60 w-4/5">
+      <div className="new_albums py-40 md:my-0 md:h-60 w-4/5">
         <h3>New Albums</h3>
         <ul>
           <li>album 1</li>

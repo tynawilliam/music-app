@@ -21,7 +21,7 @@ export default function HomePage() {
           <Carousel />
           <RecommendedSongs />
           <RecommendedArtists />
-          <div className="md:hidden my-5">
+          <div className="md:hidden my-5 ">
             <RightPanel />
           </div>
         </div>
@@ -29,7 +29,7 @@ export default function HomePage() {
           <RightPanel />
         </div>
       </div>
-      <div className={`hidden md:block audio_player h-[10vh]`}>
+      <div className={`fixed bottom-0 audio_player h-[10vh] w-full bg-red-100`}>
         <AudioPlayer />
       </div>
     </div>
