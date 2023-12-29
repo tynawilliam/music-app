@@ -1,44 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function RightPanel() {
+  const [activeSong, setActiveSong] = useState("");
+
+  const songs = [
+    "song 1",
+    "song 2",
+    "song 3",
+    "song 4",
+    "song 5",
+    "song 6",
+    "song 7",
+    "song 8",
+    "song 9",
+    "song 10",
+  ];
+
+  const albums = ["album 1", "album 2", "album 3", "album 4"];
+
+  const handleSetActiveSong = (song: string) => {
+    setActiveSong(song);
+  };
+
   return (
-    <div className="h-full flex flex-col items-center bg-primary ">
+    <div className="h-full flex flex-col items-center bg-primary font-sans">
       <div className="h-16 w-4/5 mb-10 text-accent">Nav</div>
       <div className="new_songs h-60 mb-20 md:mb-0 w-4/5">
-        <h3>New Songs</h3>
+        <h3 className="text-accent">New Songs</h3>
         <div className="md:h-48 overflow-auto">
           <ol className="list-decimal list-inside">
-            <li>song 1</li>
-            <li>song 2</li>
-            <li>song 3</li>
-            <li>song 4</li>
-            <li>song 5</li>
-            <li>song 6</li>
-            <li>song 7</li>
-            <li>song 8</li>
-            <li>song 9</li>
-            <li>song 10</li>
-            <li>song 6</li>
-            <li>song 7</li>
-            <li>song 8</li>
-            <li>song 9</li>
-            <li>song 10</li>
+            {songs.map((song) => (
+              <li
+                key={song}
+                className={`cursor-pointer h-8 ${
+                  activeSong === song ? "bg-accent text-black" : ""
+                }`}
+                onClick={() => handleSetActiveSong(song)}
+              >
+                {song}
+              </li>
+            ))}
           </ol>
         </div>
       </div>
-      <div className="new_albums py-40 md:py-10 md:my-0 md:h-60 w-4/5">
-        <h3>New Albums</h3>
-        <ul>
-          <li>album 1</li>
-          <li>album 2</li>
-          <li>album 3</li>
-          <li>album 4</li>
-          <li>album 5</li>
-          <li>album 6</li>
-          <li>album 7</li>
-          <li>album 8</li>
+      <div className="new_albums flex flex-col py-40 md:py-5 md:my-0 md:h-60 w-4/5">
+        <h3 className="text-white">New Albums</h3>
+        <ul className="list-none">
+          {albums.map((album) => (
+            <li key={album} className="cursor-pointer bg-secondary my-4 h-16">
+              {album}
+            </li>
+          ))}
         </ul>
-        <button>View All</button>
+        <button className="text-primary bg-accent">View All</button>
       </div>
     </div>
   );
