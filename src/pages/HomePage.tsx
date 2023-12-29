@@ -6,18 +6,26 @@ import RecommendedSongs from "../ components/RecommendedSongs";
 import RecommendedArtists from "../ components/RecommendedArtists";
 import AudioPlayer from "../ components/AudioPlayer";
 import Carousel from "../ components/Carousel";
-import { getFeaturedMusic } from "../utils/api";
+import { getFeaturedMusic, getFeaturedArtists } from "../utils/api";
 import { SongItem } from "../types/types";
+import { ArtistItem } from "../types/types";
 
 export default function HomePage() {
   const [songList, setSongList] = useState<SongItem[]>([]);
+  const [artistList, setArtistList] = useState<ArtistItem[]>([]);
 
   useEffect(() => {
     const featuredMusic = async () => {
       const data = await getFeaturedMusic();
       setSongList(data);
     };
+    const featuredArtists = async () => {
+      const data = await getFeaturedArtists();
+      setArtistList(data);
+    };
+
     featuredMusic();
+    featuredArtists();
   }, []);
 
   return (
@@ -32,7 +40,7 @@ export default function HomePage() {
           <SearchBar />
           <Carousel />
           <RecommendedSongs songList={songList} />
-          <RecommendedArtists />
+          <RecommendedArtists artistList={artistList} />
           <div className="md:hidden my-5 ">
             <RightPanel />
           </div>
