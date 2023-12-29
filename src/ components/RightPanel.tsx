@@ -3,8 +3,8 @@ import React from "react";
 export default function RightPanel() {
   return (
     <div className="h-full flex flex-col items-center bg-blue-100 ">
-      <div className="h-16 w-4/5">Nav</div>
-      <div className="new_songs h-60 pb-80 w-4/5">
+      <div className="h-16 w-4/5 mb-10">Nav</div>
+      <div className="new_songs h-60 mb-20 w-4/5">
         <h3>New Songs</h3>
         <div className="h-48 overflow-auto">
           <ul className="">
@@ -26,7 +26,7 @@ export default function RightPanel() {
           </ul>
         </div>
       </div>
-      <div className="new_albums h-60 w-4/5 pb-80">
+      <div className="new_albums h-60 w-4/5">
         <h3>New Albums</h3>
         <ul>
           <li>album 1</li>

@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function RecommendedSongs() {
-  return <div>RecommendedSongs</div>;
+  return <div className="h-48 border mb-10">RecommendedSongs</div>;
 }

@@ -2,10 +2,10 @@ import React from "react";
 import LeftPanel from "../ components/LeftPanel";
 import RightPanel from "../ components/RightPanel";
 import SearchBar from "../ components/SearchBar";
-import { FeaturedMusicCarousel } from "../ components/FeaturedMusicCarousel";
 import RecommendedSongs from "../ components/RecommendedSongs";
 import RecommendedArtists from "../ components/RecommendedArtists";
 import AudioPlayer from "../ components/AudioPlayer";
+import Carousel from "../ components/Carousel";
 
 export default function HomePage() {
   return (
@@ -14,9 +14,9 @@ export default function HomePage() {
         <div className={`left_panel w-1/5 h-full border flex flex-col`}>
           <LeftPanel />
         </div>
-        <div className={`center_panel w-3/5 border`}>
+        <div className={`center_panel w-3/5 border flex flex-col px-12`}>
           <SearchBar />
-          <FeaturedMusicCarousel />
+          <Carousel />
           <RecommendedSongs />
           <RecommendedArtists />
         </div>
