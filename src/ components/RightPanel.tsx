@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faCog, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 export default function RightPanel() {
   const [activeSong, setActiveSong] = useState("");
+
+  const navigate = useNavigate();
 
   const songs = [
     "Song 1",
@@ -18,15 +21,40 @@ export default function RightPanel() {
     "Song 10",
   ];
 
+  const userFirstName = "John";
+  const userName = "@johndoe";
+  const userAvatar = "/path-to-avatar.jpg";
+
   const albums = ["album 1", "album 2", "album 3", "album 4"];
 
   const handleSetActiveSong = (song: string) => {
     setActiveSong(song);
   };
 
+  const handleSettingsClick = () => {
+    navigate("/settings");
+  };
+
   return (
     <div className="h-full flex flex-col items-center bg-primary font-sans">
-      <div className="h-16 w-4/5 mb-5 text-accent">Nav</div>
+      <div className="w-4/5 mb-10 flex items-center justify-between">
+        <div className="flex items-center">
+          <img
+            src={userAvatar}
+            alt="User"
+            className="h-10 w-10 rounded-full mr-3"
+          />
+          <div>
+            <div className="text-white font-semibold">{userFirstName}</div>
+            <div className="text-accent text-sm">{userName}</div>
+          </div>
+        </div>
+        <FontAwesomeIcon
+          icon={faCog}
+          className="text-white cursor-pointer"
+          onClick={handleSettingsClick}
+        />
+      </div>
       <div className="new_songs h-60 mb-20 md:mb-0 w-4/5 relative">
         <h3 className="text-white mb-4">New Songs</h3>
         <div className="md:h-48 overflow-auto hide-scrollbar relative">
