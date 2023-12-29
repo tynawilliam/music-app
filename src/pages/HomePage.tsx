@@ -9,8 +9,8 @@ import Carousel from "../ components/Carousel";
 
 export default function HomePage() {
   return (
-    <div className={`h-screen flex flex-col`}>
-      <div className={`main_container flex h-[90vh]`}>
+    <div className={`flex flex-col min-h-screen`}>
+      <div className={`main_container md:flex h-[90vh]`}>
         <div className="left_panel hidden md:block md:w-1/5 h-full border flex flex-col">
           <LeftPanel />
         </div>
@@ -21,15 +21,15 @@ export default function HomePage() {
           <Carousel />
           <RecommendedSongs />
           <RecommendedArtists />
-          {/* <div className="md:hidden">
+          <div className="md:hidden my-5">
             <RightPanel />
-          </div> */}
+          </div>
         </div>
         <div className="right_panel hidden md:block w-1/5 border">
           <RightPanel />
         </div>
       </div>
-      <div className={`audio_player h-[10vh]`}>
+      <div className={`hidden md:block audio_player h-[10vh]`}>
         <AudioPlayer />
       </div>
     </div>
