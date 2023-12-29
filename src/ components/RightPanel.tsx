@@ -1,19 +1,21 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function RightPanel() {
   const [activeSong, setActiveSong] = useState("");
 
   const songs = [
-    "song 1",
-    "song 2",
-    "song 3",
-    "song 4",
-    "song 5",
-    "song 6",
-    "song 7",
-    "song 8",
-    "song 9",
-    "song 10",
+    "Song 1",
+    "Song 2",
+    "Song 3",
+    "Song 4",
+    "Song 5",
+    "Song 6",
+    "Song 7",
+    "Song 8",
+    "Song 9",
+    "Song 10",
   ];
 
   const albums = ["album 1", "album 2", "album 3", "album 4"];
@@ -24,20 +26,25 @@ export default function RightPanel() {
 
   return (
     <div className="h-full flex flex-col items-center bg-primary font-sans">
-      <div className="h-16 w-4/5 mb-10 text-accent">Nav</div>
-      <div className="new_songs h-60 mb-20 md:mb-0 w-4/5">
-        <h3 className="text-accent">New Songs</h3>
-        <div className="md:h-48 overflow-auto">
+      <div className="h-16 w-4/5 mb-5 text-accent">Nav</div>
+      <div className="new_songs h-60 mb-20 md:mb-0 w-4/5 relative">
+        <h3 className="text-white mb-4">New Songs</h3>
+        <div className="md:h-48 overflow-auto hide-scrollbar relative">
           <ol className="list-decimal list-inside">
             {songs.map((song) => (
               <li
                 key={song}
-                className={`cursor-pointer h-8 ${
-                  activeSong === song ? "bg-accent text-black" : ""
+                className={`flex items-center justify-between cursor-pointer h-8 p-1 pl-2 ${
+                  activeSong === song
+                    ? "bg-accent rounded text-black"
+                    : "text-white"
                 }`}
                 onClick={() => handleSetActiveSong(song)}
               >
-                {song}
+                <span>{song}</span>
+                {activeSong === song && (
+                  <FontAwesomeIcon icon={faPlay} className="mr-2" />
+                )}
               </li>
             ))}
           </ol>
