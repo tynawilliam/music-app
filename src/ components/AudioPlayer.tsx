@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function AudioPlayer() {
-  return <div>AudioPlayer</div>;
+  return <div className="h-full bg-light">AudioPlayer</div>;
 }
