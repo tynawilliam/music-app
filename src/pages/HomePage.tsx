@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LeftPanel from "../ components/LeftPanel";
 import RightPanel from "../ components/RightPanel";
 import SearchBar from "../ components/SearchBar";
@@ -6,8 +6,20 @@ import RecommendedSongs from "../ components/RecommendedSongs";
 import RecommendedArtists from "../ components/RecommendedArtists";
 import AudioPlayer from "../ components/AudioPlayer";
 import Carousel from "../ components/Carousel";
+import { getFeaturedMusic } from "../utils/api";
+import { SongItem } from "../types/types";
 
 export default function HomePage() {
+  const [songList, setSongList] = useState<SongItem[]>([]);
+
+  useEffect(() => {
+    const featuredMusic = async () => {
+      const data = await getFeaturedMusic();
+      setSongList(data);
+    };
+    featuredMusic();
+  }, []);
+
   return (
     <div className={`flex flex-col min-h-screen`}>
       <div className={`main_container md:flex h-[90vh]`}>
@@ -19,7 +31,7 @@ export default function HomePage() {
         >
           <SearchBar />
           <Carousel />
-          <RecommendedSongs />
+          <RecommendedSongs songList={songList} />
           <RecommendedArtists />
           <div className="md:hidden my-5 ">
             <RightPanel />
