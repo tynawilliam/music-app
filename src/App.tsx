@@ -5,6 +5,8 @@ import SettingsPage from "./pages/SettingsPage";
 import Library from "./pages/Library";
 import Favorites from "./pages/Favorites";
 import NotFound from "./pages/NotFound";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
