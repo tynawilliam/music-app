@@ -5,6 +5,11 @@ export const getFeaturedMusic = async () => {
     { id: "3", title: "Song 3", artist: "Artist 3", image: "image3.jpg" },
     { id: "4", title: "Song 4", artist: "Artist 4", image: "image4.jpg" },
     { id: "5", title: "Song 5", artist: "Artist 5", image: "image5.jpg" },
+    { id: "6", title: "Song 6", artist: "Artist 6", image: "image6.jpg" },
+    { id: "7", title: "Song 7", artist: "Artist 7", image: "image7.jpg" },
+    { id: "8", title: "Song 8", artist: "Artist 8", image: "image8.jpg" },
+    { id: "9", title: "Song 9", artist: "Artist 9", image: "image9.jpg" },
+    { id: "10", title: "Song 10", artist: "Artist 10", image: "image10.jpg" },
   ];
 };
 

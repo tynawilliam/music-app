@@ -120,7 +120,7 @@ export default function RightPanel() {
           ))}
         </ul>
 
-        <button className="text-primary bg-accent">View All</button>
+        <button className="text-neutral-400 bg-secondary">View All</button>
       </div>
     </div>
   );
