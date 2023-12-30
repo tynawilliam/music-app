@@ -4,10 +4,6 @@ import { faCog, faPlay } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 export default function RightPanel() {
-  const [activeSong, setActiveSong] = useState<string>("");
-
-  const navigate = useNavigate();
-
   const songs = [
     "Song 1",
     "Song 2",
@@ -20,6 +16,9 @@ export default function RightPanel() {
     "Song 9",
     "Song 10",
   ];
+  const [activeSong, setActiveSong] = useState<string>(songs[0]);
+
+  const navigate = useNavigate();
 
   const userFirstName = "Jane";
   const userName = "@janedoe";
@@ -57,7 +56,7 @@ export default function RightPanel() {
   };
 
   return (
-    <div className="h-full flex flex-col items-center bg-primary font-sans">
+    <div className="h-full flex flex-col items-center bg-primary font-serif">
       <div className="w-4/5 mb-10 flex items-center justify-between">
         <div className="flex items-center">
           <img
@@ -77,7 +76,7 @@ export default function RightPanel() {
         />
       </div>
       <div className="new_songs h-60 mb-20 md:mb-0 w-4/5 relative">
-        <h3 className="text-white mb-4">New Songs</h3>
+        <h3 className=" text-white mb-4">New Songs</h3>
         <div className="md:h-48 overflow-auto hide-scrollbar relative">
           <ol className="list-decimal list-inside">
             {songs.map((song) => (
