@@ -22,3 +22,7 @@
   background: linear-gradient(to bottom, rgba(27, 23, 48, 0) 0%, #110e20 100%);
   pointer-events: none;
 }
+
+.slick-slide.slick-center img {
+  transform: scale(2.1);
+}

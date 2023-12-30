@@ -6,7 +6,7 @@ export default function SearchBar() {
       <input
         type="text"
         placeholder="Search"
-        className="hidden md:block w-1/2 h-10 my-5 pl-3 bg-secondary placeholder-zinc-500"
+        className="hidden md:block w-1/2 my-5 p-2 bg-secondary placeholder-zinc-500 rounded"
       />
     </>
   );

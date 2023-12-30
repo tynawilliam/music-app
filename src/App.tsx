@@ -7,6 +7,7 @@ import Favorites from "./pages/Favorites";
 import NotFound from "./pages/NotFound";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Carousel from "./ components/Carousel";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/library" element={<Library />} />
         <Route path="/favorites" element={<Favorites />} />
+        <Route path="/test" element={<Carousel />} />
       </Routes>
     </Router>
   );

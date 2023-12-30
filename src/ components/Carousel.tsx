@@ -19,7 +19,7 @@ export default function Carousel() {
     autoplay: true,
     autoplaySpeed: 3000,
     centerMode: true,
-    centerPadding: "50px",
+    centerPadding: "0",
     focusOnSelect: true,
     responsive: [
       {
