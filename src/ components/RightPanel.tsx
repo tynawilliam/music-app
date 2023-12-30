@@ -21,9 +21,9 @@ export default function RightPanel() {
     "Song 10",
   ];
 
-  const userFirstName = "John";
-  const userName = "@johndoe";
-  const userAvatar = "/path-to-avatar.jpg";
+  const userFirstName = "Jane";
+  const userName = "@janedoe";
+  const userAvatar = "/images/avatar.svg";
 
   const albums = [
     {

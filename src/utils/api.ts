@@ -1,15 +1,65 @@
 export const getFeaturedMusic = async () => {
   return [
-    { id: "1", title: "Song 1", artist: "Artist 1", image: "image1.jpg" },
-    { id: "2", title: "Song 2", artist: "Artist 2", image: "image2.jpg" },
-    { id: "3", title: "Song 3", artist: "Artist 3", image: "image3.jpg" },
-    { id: "4", title: "Song 4", artist: "Artist 4", image: "image4.jpg" },
-    { id: "5", title: "Song 5", artist: "Artist 5", image: "image5.jpg" },
-    { id: "6", title: "Song 6", artist: "Artist 6", image: "image6.jpg" },
-    { id: "7", title: "Song 7", artist: "Artist 7", image: "image7.jpg" },
-    { id: "8", title: "Song 8", artist: "Artist 8", image: "image8.jpg" },
-    { id: "9", title: "Song 9", artist: "Artist 9", image: "image9.jpg" },
-    { id: "10", title: "Song 10", artist: "Artist 10", image: "image10.jpg" },
+    {
+      id: "1",
+      title: "I Like That",
+      artist: "Janelle Monáe",
+      image: "/images/album1.webp",
+    },
+    {
+      id: "2",
+      title: "Earthquake",
+      artist: "Tyler, The Creator",
+      image: "/images/album2.jpeg",
+    },
+    {
+      id: "3",
+      title: "The Hills",
+      artist: "The Weeknd",
+      image: "/images/album3.jpeg",
+    },
+    {
+      id: "4",
+      title: "You Belong With Me",
+      artist: "Taylor Swift",
+      image: "/images/album4.webp",
+    },
+    {
+      id: "5",
+      title: "Snow Angel",
+      artist: "Renee Rapp",
+      image: "/images/album5.webp",
+    },
+    {
+      id: "6",
+      title: "Love Yourself",
+      artist: "Justin Bieber",
+      image: "/images/album6.webp",
+    },
+    {
+      id: "7",
+      title: "Formation",
+      artist: "Beyoncé",
+      image: "/images/album7.jpeg",
+    },
+    {
+      id: "8",
+      title: "Lovin' On Me",
+      artist: "Jack Harlow",
+      image: "/images/album8.jpeg",
+    },
+    {
+      id: "9",
+      title: "On My Mama",
+      artist: "Victoria Monét",
+      image: "/images/album9.jpeg",
+    },
+    {
+      id: "10",
+      title: "The Door",
+      artist: "Teddy Swims",
+      image: "/images/album10.jpeg",
+    },
   ];
 };
 

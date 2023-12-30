@@ -11,7 +11,7 @@ export default function AlbumCard({ song }: { song: SongItem }) {
 
   return (
     <div className="w-40 flex flex-col flex-shrink-0 bg-secondary relative group">
-      <img src={song.image} alt={song.title} className="w-full h-28" />
+      <img src={song.image} alt={song.title} className="w-full h-full" />
       <div className="text-left px-2 py-1">
         <h1 className="text-white text-sm font-bold truncate">{song.title}</h1>
         <p className="text-gray-400 text-xs truncate">{song.artist}</p>
