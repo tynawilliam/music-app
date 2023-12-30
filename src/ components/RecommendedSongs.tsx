@@ -28,11 +28,11 @@ export default function RecommendedSongs({
   };
 
   return (
-    <div className="h-48 border mb-10 flex flex-col">
+    <div className="h-48 mb-10 flex flex-col">
       <h1>Recommended Songs</h1>
       <div className="relative flex items-center">
         <button
-          className="absolute left-0 z-10 p-2 bg-black bg-opacity-50 rounded-full"
+          className="absolute left-0 z-10 p-2 bg-black bg-opacity-50 rounded-full flex items-center justify-center h-12 w-12"
           onClick={() => handleScroll("left")}
         >
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
@@ -46,7 +46,7 @@ export default function RecommendedSongs({
           ))}
         </div>
         <button
-          className="absolute right-0 z-10 p-2 bg-black bg-opacity-50 rounded-full"
+          className="absolute right-0 z-10 p-2 bg-black bg-opacity-50 rounded-full flex items-center justify-center h-12 w-12"
           onClick={() => handleScroll("right")}
         >
           <FontAwesomeIcon icon={faChevronRight} size="lg" />
