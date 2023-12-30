@@ -65,15 +65,15 @@ export const getFeaturedMusic = async () => {
 
 export const getFeaturedArtists = async () => {
   return [
-    { id: "1", name: "Artist 1", image: "image1.jpg" },
-    { id: "2", name: "Artist 2", image: "image2.jpg" },
-    { id: "3", name: "Artist 3", image: "image3.jpg" },
-    { id: "4", name: "Artist 4", image: "image4.jpg" },
-    { id: "5", name: "Artist 5", image: "image5.jpg" },
-    { id: "6", name: "Artist 6", image: "image6.jpg" },
-    { id: "7", name: "Artist 7", image: "image7.jpg" },
-    { id: "8", name: "Artist 8", image: "image8.jpg" },
-    { id: "9", name: "Artist 9", image: "image9.jpg" },
-    { id: "10", name: "Artist 10", image: "image10.jpg" },
+    { id: "1", name: "Becky G", image: "images/avi1.jpeg" },
+    { id: "2", name: "Bad Bunny", image: "images/avi2.webp" },
+    { id: "3", name: "Coco Jones", image: "images/avi3.webp" },
+    { id: "4", name: "Taylor Swift", image: "images/avi4.webp" },
+    { id: "5", name: "SZA", image: "images/avi5.jpeg" },
+    { id: "6", name: "Beyoncé", image: "images/avi6.webp" },
+    { id: "7", name: "Chris Brown", image: "images/avi7.jpeg" },
+    { id: "8", name: "Jack Harlow", image: "images/avi8.webp" },
+    { id: "9", name: "Lil Baby", image: "images/avi9.jpeg" },
+    { id: "10", name: "Cardi B", image: "images/avi10.webp" },
   ];
 };

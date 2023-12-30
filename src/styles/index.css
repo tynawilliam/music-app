@@ -24,5 +24,9 @@
 }
 
 .slick-slide.slick-center img {
-  transform: scale(2.1);
+  transform: scale(2 0.1);
+}
+
+ol {
+  list-style-type: decimal inside;
 }

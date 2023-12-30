@@ -12,7 +12,7 @@ export default function RecommendedArtists({
   artistList: ArtistItem[];
 }) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const scrollAmount = 250; // You can adjust this value
+  const scrollAmount = 400;
 
   const handleScroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
@@ -49,7 +49,10 @@ export default function RecommendedArtists({
           </div>
         ))}
       </div>
-      <button className="absolute right-0 z-10 p-2 bg-black bottom-5 bg-opacity-50 rounded-full flex items-center justify-center h-12 w-12">
+      <button
+        className="absolute right-0 z-10 p-2 bg-black bottom-5 bg-opacity-50 rounded-full flex items-center justify-center h-12 w-12"
+        onClick={() => handleScroll("right")}
+      >
         <FontAwesomeIcon icon={faChevronRight} className="text-white text-lg" />
       </button>
     </div>

@@ -3,11 +3,11 @@ import Slider from "react-slick";
 
 export default function Carousel() {
   const images = [
-    "/images/album1.webp",
-    "/images/album2.jpeg",
-    "/images/album3.jpeg",
-    "/images/album4.webp",
-    "/images/album5.webp",
+    "/images/spotlight1.avif",
+    "/images/spotlight2.webp",
+    "/images/spotlight3.jpeg",
+    "/images/spotlight4.jpeg",
+    "/images/spotlight5.png",
   ];
   const settings = {
     className: "center",
@@ -36,7 +36,7 @@ export default function Carousel() {
     <Slider {...settings}>
       {images.map((image, index) => (
         <div key={index}>
-          <img className="mx-10" src={image} alt="Album image" />
+          <img className="pt-5 my-10" src={image} alt="Album image" />
         </div>
       ))}
     </Slider>
