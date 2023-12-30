@@ -29,22 +29,22 @@ export default function RightPanel() {
     {
       name: "Album 1",
       artist: "Artist 1",
-      cover: "/path-to-album-cover-1.jpg",
+      cover: "/images/avi1.jpeg",
     },
     {
       name: "Album 2",
       artist: "Artist 2",
-      cover: "/path-to-album-cover-2.jpg",
+      cover: "/images/avi2.webp",
     },
     {
       name: "Album 3",
       artist: "Artist 3",
-      cover: "/path-to-album-cover-3.jpg",
+      cover: "/images/avi3.webp",
     },
     {
       name: "Album 4",
       artist: "Artist 4",
-      cover: "/path-to-album-cover-4.jpg",
+      cover: "/images/avi4.webp",
     },
   ];
 
@@ -105,12 +105,12 @@ export default function RightPanel() {
           {albums.map((album, index) => (
             <li
               key={index}
-              className="cursor-pointer bg-secondary my-4 flex items-center"
+              className="cursor-pointer bg-secondary my-4 flex items-center rounded"
             >
               <img
                 src={album.cover}
                 alt={album.name}
-                className="w-16 h-16 object-cover"
+                className="w-16 h-16 object-cover rounded"
               />
               <div className="ml-4">
                 <div className="text-white font-semibold">{album.name}</div>
