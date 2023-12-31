@@ -50,7 +50,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className={`fixed bottom-0 audio_player h-[10vh] w-full`}>
-        <AudioPlayer />
+        <AudioPlayer audioList={songList} />
       </div>
     </div>
   );

@@ -38,16 +38,13 @@ export default function LeftPanel() {
       </ul>
 
       <div>
-        <h3 className="text-lg mb-2">Playlists</h3>
+        <h3 className="text-lg text-neutral-400 mb-2">Playlists</h3>
         <ul className="space-y-2">
           {playlistItems.map((playlist) => (
             <li
               key={playlist}
               className="group flex items-center cursor-pointer hover:text-accent"
             >
-              <span className="text-neutral-400 mr-3 pr-2 group-hover:text-accent">
-                —
-              </span>
               <Link to={"#"} className="group-hover:text-accent">
                 {playlist}
               </Link>
