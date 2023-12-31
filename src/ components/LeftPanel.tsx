@@ -20,7 +20,7 @@ export default function LeftPanel() {
   const playlistItems = ["Pop", "Rock", "Country", "Classical", "R&B"];
 
   return (
-    <div className="flex flex-col h-full bg-primary text-white p-5 pl-10 space-y-6">
+    <div className="flex flex-col h-full bg-secondary text-white p-5 pl-10 space-y-6">
       <h1 className="text-2xl text-accent font-bold mb-20">HIWOW</h1>
       <ul>
         {navigationItems.map((item) => (

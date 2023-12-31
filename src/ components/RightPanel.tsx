@@ -22,7 +22,7 @@ const SongCard: React.FC<SongCardProps> = ({ song, isActive, onSetActive }) => (
       <span className="font-medium">{song.title}</span>
       <span className="text-sm">{song.artist}</span>
     </div>
-    <div className="flex items-center ml-2">
+    <div className="flex items-center space-x-4 mr-5">
       {isActive && (
         <FontAwesomeIcon
           icon={faPlay}
@@ -52,7 +52,7 @@ const RightPanel: React.FC = () => {
   const userAvatar = "/images/avatar.svg";
 
   return (
-    <div className="flex flex-col h-full bg-black text-white p-4">
+    <div className="flex flex-col h-full bg-primary text-white p-4">
       {/* User Navbar */}
       <div className="flex items-center justify-between w-full mb-6">
         <div className="flex items-center">
@@ -75,7 +75,7 @@ const RightPanel: React.FC = () => {
 
       {/* New Songs */}
       <h3 className="text-lg mb-4 font-semibold">New Songs</h3>
-      <div className="overflow-y-auto">
+      <div className="overflow-y-auto hide-scrollbar">
         {songs.map((song, index) => (
           <SongCard
             key={song.id}
