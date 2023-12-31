@@ -45,7 +45,7 @@ export default function HomePage() {
             <RightPanel />
           </div>
         </div>
-        <div className="right_panel hidden md:block w-1/5">
+        <div className="right_panel hidden md:block w-[25vw]">
           <RightPanel />
         </div>
       </div>
