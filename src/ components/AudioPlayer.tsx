@@ -66,10 +66,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioList }) => {
     }
   }, [isMuted]);
 
-  // useEffect(() => {
-  //   setIsPlaying(true);
-  // }, [currentSongIndex]);
-
   useEffect(() => {
     const updateProgress = () => {
       if (audioRef.current) {

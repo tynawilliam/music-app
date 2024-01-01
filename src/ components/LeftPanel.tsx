@@ -5,7 +5,6 @@ import {
   faSearch,
   faBook,
   faHeart,
-  // faMusic,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
