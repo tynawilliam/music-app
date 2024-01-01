@@ -1,3 +1,45 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*custom gradient for song list*/
+.new_songs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  background: linear-gradient(to bottom, rgba(27, 23, 48, 0) 0%, #110e20 100%);
+  pointer-events: none;
+}
+
+.slick-slide.slick-center img {
+  transform: scale(2.1);
+}
+
+ol {
+  list-style-type: decimal inside;
+}
+
+.progress-bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    theme("colors.accent") var(--progress),
+    theme("colors.white") var(--progress)
+  );
+  transition: background-size 0.3s ease;
+  width: var(--progress-percent);
+}
