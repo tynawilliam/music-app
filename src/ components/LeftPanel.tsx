@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-export default function LeftPanel() {
+const LeftPanel = React.memo(() => {
   const navigationItems = [
     { name: "Home", icon: faHome },
     { name: "Search", icon: faSearch },
@@ -31,7 +31,7 @@ export default function LeftPanel() {
               icon={item.icon}
               className="text-neutral-400 mr-7 group-hover:text-accent"
             />
-            <span className="group-hover:text-accent"> {item.name} </span>
+            <span className="group-hover:text-accent">{item.name}</span>
           </li>
         ))}
       </ul>
@@ -53,4 +53,7 @@ export default function LeftPanel() {
       </div>
     </div>
   );
-}
+});
+
+LeftPanel.displayName = "LeftPanel";
+export default React.memo(LeftPanel);
