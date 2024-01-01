@@ -28,7 +28,7 @@ export default function RecommendedSongs({
   };
 
   return (
-    <div className="h-48 mt-8 mb-16 flex flex-col">
+    <div className="h-48 mt-8 mb-16 flex flex-col text-white">
       <h1>Recommended Songs</h1>
       <div className="relative flex items-center">
         <button

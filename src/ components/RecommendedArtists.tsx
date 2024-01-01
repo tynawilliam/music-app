@@ -26,7 +26,7 @@ export default function RecommendedArtists({
   };
 
   return (
-    <div className="mb-10 relative">
+    <div className="mb-10 relative text-white">
       <h1>Recommended Artists</h1>
       <button
         className="absolute left-0 z-10 p-2 bottom-5 bg-black bg-opacity-50 rounded-full flex items-center justify-center h-12 w-12"
