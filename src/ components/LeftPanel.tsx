@@ -18,7 +18,7 @@ const LeftPanel = React.memo(() => {
   const navigationItems = [
     { name: "Home", icon: faHome, path: "/" },
     { name: "Search", icon: faSearch, path: "/search" },
-    { name: "Library", icon: faBook, path: "/library" },
+    { name: "Browse", icon: faBook, path: "/browse" },
     { name: "Favorites", icon: faHeart, path: "/favorites" },
   ];
 
