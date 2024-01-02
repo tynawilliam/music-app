@@ -85,16 +85,16 @@ Beatz Music is open-source software licensed under the MIT license.
 
 ### Browse Page
 
-![Browse Page](/public/images/screenshots/browse.png)
+![Browse Page](public/screenshots/browse.png)
 
 ### Homepage
 
-![Homepage](/public/images/screenshots/homepage.png)
+![Homepage](/public/screenshots/homepage.png)
 
 ### Playlist Page
 
-![Playlist Page](/public/images/screenshots/playlist.png)
+![Playlist Page](/public/screenshots/playlist.png)
 
 ### Search Page
 
-![Search Page](/public/images/screenshots/search.png)
+![Search Page](/public/screenshots/search.png)
