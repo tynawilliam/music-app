@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../store"; // Adjust the import path as necessary
+import { RootState } from "../store";
 import { setActivePage } from "../features/activePage/activePageSlice";
 
 const LeftPanel = React.memo(() => {
@@ -24,14 +24,19 @@ const LeftPanel = React.memo(() => {
 
   const playlistItems = ["Pop", "Rock", "Country", "Classical", "R&B"];
 
-  // Dispatch the setActivePage action when a navigation item is clicked
   const handleItemClick = (name: string) => {
     dispatch(setActivePage(name));
   };
 
   return (
     <div className="flex flex-col h-full bg-secondary text-white p-5 pl-10 space-y-6">
-      <h1 className="text-2xl text-accent font-bold mb-20">HIWOW</h1>
+      <div className="text-2xl text-accent font-bold mb-20">
+        <div className="circle bg-white rounded-full w-12 h-12 flex items-center justify-center">
+          <span className="text-purple-800 font-bold">B</span>
+        </div>
+        <p className="text-white text-opacity-50">Beatz</p>
+        <p className="text-xs text-white text-opacity-50">music</p>
+      </div>
       <ul>
         {navigationItems.map((item) => (
           <li
@@ -69,7 +74,6 @@ const LeftPanel = React.memo(() => {
               key={playlist}
               className="group flex items-center cursor-pointer hover:text-accent"
             >
-              {/* Replace "#" with your playlist link logic */}
               <NavLink to={`#${playlist}`} className="group-hover:text-accent">
                 {playlist}
               </NavLink>
