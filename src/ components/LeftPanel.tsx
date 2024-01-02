@@ -6,32 +6,62 @@ import {
   faBook,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../store";
+import { setActivePage } from "../features/activePage/activePageSlice";
 
 const LeftPanel = React.memo(() => {
+  const dispatch = useDispatch();
+  const activePage = useSelector((state: RootState) => state.activePage.value);
+
   const navigationItems = [
-    { name: "Home", icon: faHome },
-    { name: "Search", icon: faSearch },
-    { name: "Library", icon: faBook },
-    { name: "Favorites", icon: faHeart },
+    { name: "Home", icon: faHome, path: "/" },
+    { name: "Search", icon: faSearch, path: "/search" },
+    { name: "Browse", icon: faBook, path: "/browse" },
+    { name: "Favorites", icon: faHeart, path: "/favorites" },
   ];
 
   const playlistItems = ["Pop", "Rock", "Country", "Classical", "R&B"];
 
+  const handleItemClick = (name: string) => {
+    dispatch(setActivePage(name));
+  };
+
   return (
     <div className="flex flex-col h-full bg-secondary text-white p-5 pl-10 space-y-6">
-      <h1 className="text-2xl text-accent font-bold mb-20">HIWOW</h1>
+      <div className="text-2xl text-accent font-bold mb-20">
+        <div className="circle bg-white rounded-full w-12 h-12 flex items-center justify-center">
+          <span className="text-purple-800 font-bold">B</span>
+        </div>
+        <p className="text-white text-opacity-50">Beatz</p>
+        <p className="text-xs text-white text-opacity-50">music</p>
+      </div>
       <ul>
         {navigationItems.map((item) => (
           <li
             key={item.name}
-            className="flex items-center mb-4 cursor-pointer group"
+            className={`flex items-center mb-4 cursor-pointer group ${
+              activePage === item.name ? "text-accent" : "text-neutral-400"
+            }`}
+            onClick={() => handleItemClick(item.name)}
           >
             <FontAwesomeIcon
               icon={item.icon}
-              className="text-neutral-400 mr-7 group-hover:text-accent"
+              className={`mr-7 group-hover:text-accent ${
+                activePage === item.name ? "text-accent" : "text-neutral-400"
+              }`}
             />
-            <span className="group-hover:text-accent">{item.name}</span>
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-accent"
+                  : "text-neutral-400 group-hover:text-accent"
+              }
+            >
+              {item.name}
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -44,9 +74,9 @@ const LeftPanel = React.memo(() => {
               key={playlist}
               className="group flex items-center cursor-pointer hover:text-accent"
             >
-              <Link to={"#"} className="group-hover:text-accent">
+              <NavLink to={`#${playlist}`} className="group-hover:text-accent">
                 {playlist}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
@@ -56,4 +86,4 @@ const LeftPanel = React.memo(() => {
 });
 
 LeftPanel.displayName = "LeftPanel";
-export default React.memo(LeftPanel);
+export default LeftPanel;

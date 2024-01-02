@@ -21,3 +21,11 @@ export type ArtistItem = {
 export type AudioPlayerProps = {
   audioList: SongItem[];
 };
+
+export interface CardProps {
+  id: string;
+  category: string;
+  title: string;
+  image: string;
+  songIds: string[];
+}

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { SongItem } from "../types/types";
-import AlbumCard from "./AlbumCard";
+import AlbumCard from "./uiComponents/AlbumCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,

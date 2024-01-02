@@ -23,13 +23,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen bg-primary">
       <div className="flex flex-1 overflow-hidden">
-        <aside className="hidden md:block md:w-1/5 xl:w-1/6">
+        <aside className="fixed hidden h-full md:block md:w-1/5 xl:w-1/6">
           <LeftPanel />
         </aside>
 
-        <main className="flex-1 overflow-y-auto">{children}</main>
+        <main className="flex-1 overflow-y-auto pl-[20%] md:pl-[20%] xl:pl-[16.666667%]">
+          {children}
+        </main>
 
-        <aside className="hidden md:block md:w-1/4 xl:w-1/5">
+        <aside className="fixed hidden h-full right-0 md:block md:w-1/4 xl:w-1/5">
           <RightPanel />
         </aside>
       </div>

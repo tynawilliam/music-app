@@ -5,6 +5,10 @@ import NotFound from "./pages/NotFound";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Layout from "./ components/Layout";
+import Browse from "./pages/Browse";
+import Favorites from "./pages/Favorites";
+import Search from "./pages/Search";
+import PlaylistPage from "./pages/PlaylistPage";
 
 function App() {
   return (
@@ -16,6 +20,38 @@ function App() {
           element={
             <Layout>
               <HomePage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/browse"
+          element={
+            <Layout>
+              <Browse />
+            </Layout>
+          }
+        />
+        <Route
+          path="/favorites"
+          element={
+            <Layout>
+              <Favorites />
+            </Layout>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <Layout>
+              <Search />
+            </Layout>
+          }
+        />
+        <Route
+          path="/playlist/:playlistId"
+          element={
+            <Layout>
+              <PlaylistPage />
             </Layout>
           }
         />
