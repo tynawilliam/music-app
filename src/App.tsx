@@ -8,6 +8,7 @@ import Layout from "./ components/Layout";
 import Browse from "./pages/Browse";
 import Favorites from "./pages/Favorites";
 import Search from "./pages/Search";
+import PlaylistPage from "./pages/PlaylistPage";
 
 function App() {
   return (
@@ -43,6 +44,14 @@ function App() {
           element={
             <Layout>
               <Search />
+            </Layout>
+          }
+        />
+        <Route
+          path="/playlist/:playlistId"
+          element={
+            <Layout>
+              <PlaylistPage />
             </Layout>
           }
         />

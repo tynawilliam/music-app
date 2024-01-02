@@ -1,5 +1,6 @@
 import React from "react";
 import BrowseCard from "../ components/uiComponents/BrowseCard";
+import { Link } from "react-router-dom";
 
 export default function Browse() {
   const data = [
@@ -97,9 +98,9 @@ export default function Browse() {
       </p>
       <div className="flex flex-wrap -mx-2 mb-10 w-[62vw]">
         {data.map((item) => (
-          <div key={item.id} className="w-1/3 p2">
+          <Link to={`/playlist/${item.id}`} key={item.id} className="w-1/3 p2">
             <BrowseCard {...item} />
-          </div>
+          </Link>
         ))}
       </div>
     </div>
